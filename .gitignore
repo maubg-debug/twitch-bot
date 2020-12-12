@@ -1,10 +1,53 @@
-# For projects using Nanoc (http://nanoc.ws/)
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
 
-# Default location for output (needs to match output_dir's value found in nanoc.yaml)
-output/
+# Folder config file
+Desktop.ini
 
-# Temporary file directory
-tmp/nanoc/
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# Crash Log
-crash.log
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+.idea/
+yarn.lock
+node_modules/
+config/default.json5
+
+coverage/

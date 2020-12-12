@@ -1,0 +1,14 @@
+{
+  options: {
+    debug: true
+  },
+  connection: {
+    cluster: "aws",
+    reconnect: true
+  },
+  bot: {
+    username: "tu-nombre-de-robot",
+    oauth_token: "token" // Puedes hacer login aqui https://twitchapps.com/tmi/
+  },
+  channel: "tu-canal-aqui"
+}
