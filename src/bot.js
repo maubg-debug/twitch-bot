@@ -22,7 +22,6 @@ client.on("chat", (channel, user, message, self) => {
         client.say(channel, user.username + " PONG PopCorn")
       }
 
-
     }
   }
 
