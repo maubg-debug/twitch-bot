@@ -19,9 +19,17 @@ client.on("chat", (channel, user, message, self) => {
 
 
       if (message === prefijo + "ping") {
-        client.say(channel, "PONG PopCorn")
-      } 
+        client.say(channel, user.username + " PONG PopCorn")
+      }
+
+
     }
   }
 
+});
+
+client.on("subscription", function (channel, username, methods ) {
+
+  client.say(channel, username.username + ", gracias por seguirme amigo" )
+  
 });
