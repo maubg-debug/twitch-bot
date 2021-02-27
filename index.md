@@ -1,37 +1,65 @@
-## Welcome to GitHub Pages
+# MauTwitch
 
-You can use the [editor on GitHub](https://github.com/maubg-debug/twitch-bot/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Instalar
 
-### Markdown
+1. Clonar el repositorio
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+2. Instalar dependencias `npm i` o `yarn install`
 
-```markdown
-Syntax highlighted code block
+3. Copiar el archivo de configuracion
 
-# Header 1
-## Header 2
-### Header 3
+   ```bash
+   cp config/default.example.json5 config/default.json5
+   ```
 
-- Bulleted
-- List
+4. Preparar el robot
 
-1. Numbered
-2. List
+`oauth_token` puedes cojerlo [aqui haciendo login como bot](https://twitchapps.com/tmi/)
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+bot: {
+  username: "tu-nombre-de-robot",
+  oauth_token: "token" // Puedes hacer login aqui https://twitchapps.com/tmi/
+},
+channel: "tu-canal-aqui"
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+5. Correr el robot `npm start`
 
-### Jekyll Themes
+## Utilidades
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/maubg-debug/twitch-bot/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+**Mirar si usuario es un moderador**
 
-### Support or Contact
+```js
+import { isModerator } from "./utils";
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+// Puede obtener información sobre el usuario a partir del mensaje entrante
+const user = messageInfo.user;
+
+if (isModerator(user)) {
+  console.log(`${user.username} Es moderado este canal.`);
+}
+```
+
+**Enviar mensage a un usuario**
+
+```js
+import { messageToUser } from "./utils";
+
+// Puede obtener información sobre el usuario a partir del mensaje entrante
+const user = messageInfo.user;
+
+const message = ", gracias por seguir amigo";
+
+messageToUser(user.username, message);
+
+// En el chat
+// Tu robot: @Maubg-debug, gracias por seguir amigo
+```
+
+## Contribuiciones
+
+Si tiene algún comentario o idea, vaya al número nuevo.
+
+## Diviertete :blush:
