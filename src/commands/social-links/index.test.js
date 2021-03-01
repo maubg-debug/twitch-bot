@@ -2,7 +2,7 @@ import socialLinks from "./index";
 
 const links = {
   github: "https://github.com",
-  twitch: "https://twitch.tv/devkucher"
+  twitch: "https://twitch.tv/maubg"
 };
 
 test("Get github link", () => {
