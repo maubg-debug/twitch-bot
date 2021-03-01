@@ -1,13 +1,13 @@
 {
   "name": "twitch-bot-boilerplate",
   "version": "1.0.0",
-  "description": "Twitch Bot starter templater",
+  "description": "Robot de twich creado por Maubg",
   "main": "src/bot.js",
   "scripts": {
     "start": "nodemon --exec babel-node src/bot.js",
     "test": "jest --silent --coverage"
   },
-  "author": "Ivan Kucher",
+  "author": "Maubg",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.6.2",
